@@ -7,15 +7,11 @@
              mc:Ignorable="d"
              x:Class="JM_Apuntes.Views.StatsPage">
 
-    <FlexLayout Direction="Column" JustifyContent="Start" AlignItems="Center">
-        <Label Text="MJ" FontSize="36" FontAttributes="Bold" Margin="10"/>
-
-        <Entry x:Name="InputEntry" Placeholder="Ingrese texto" Margin="10"/>
-
-        <Button Text="Calcular" Clicked="OnCalculateClicked" Margin="10"/>
-
-        <Label x:Name="ResultLabel" FontSize="18" Margin="10"/>
-
-        <Button Text="Limpiar" Clicked="OnClearClicked" Margin="10"/>
+    <FlexLayout Direction="Column" JustifyContent="Start" AlignItems="Center" BackgroundColor="#F5F5F5" Padding="20">
+        <Label Text="MJ" FontSize="72" FontAttributes="Bold" TextColor="#2196F3"/>
+        <Entry x:Name="InputEntry" Placeholder="Ingrese texto" BackgroundColor="#E0E0E0" Margin="10" FontSize="18" TextColor="Black"/>
+        <Button Text="Calcular" Clicked="OnCalculateClicked" BackgroundColor="#4CAF50" TextColor="White" Margin="10"/>
+        <Label x:Name="ResultLabel" FontSize="18" TextColor="#333333" Margin="10"/>
+        <Button Text="Limpiar" Clicked="OnClearClicked" BackgroundColor="#FF5252" TextColor="White" Margin="10"/>
     </FlexLayout>
 </ContentPage>
