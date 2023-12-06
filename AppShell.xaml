@@ -13,5 +13,10 @@
         <ShellContent ContentTemplate="{DataTemplate views:AboutPage}" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Stats">
+        <ShellContent ContentTemplate="{DataTemplate views:StatsPage}" />
+    </FlyoutItem>
+
+
 </Shell>
 

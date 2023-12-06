@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:JM_Apuntes.Views"
+             mc:Ignorable="d"
+             x:Class="JM_Apuntes.Views.StatsPage">
+
+    <FlexLayout Direction="Column" JustifyContent="Start" AlignItems="Center">
+        <Label Text="MJ" FontSize="36" FontAttributes="Bold" Margin="10"/>
+
+        <Entry x:Name="InputEntry" Placeholder="Ingrese texto" Margin="10"/>
+
+        <Button Text="Calcular" Clicked="OnCalculateClicked" Margin="10"/>
+
+        <Label x:Name="ResultLabel" FontSize="18" Margin="10"/>
+
+        <Button Text="Limpiar" Clicked="OnClearClicked" Margin="10"/>
+    </FlexLayout>
+</ContentPage>
