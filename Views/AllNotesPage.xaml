@@ -23,12 +23,11 @@
                     SelectionMode="Single"
                     SelectionChangedCommand="{Binding SelectNoteCommand}"
                     SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
-        
+
         <CollectionView.ItemsLayout>
             <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
         </CollectionView.ItemsLayout>
 
-        
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>
