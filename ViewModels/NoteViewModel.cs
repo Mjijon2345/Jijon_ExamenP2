@@ -15,20 +15,20 @@ internal class NoteViewModel : ObservableObject, IQueryAttributable
 
     public string Text
     {
-        get => _note.MText;
+        get => _note.MJText;
         set
         {
-            if (_note.MText != value)
+            if (_note.MJText != value)
             {
-                _note.MText = value;
+                _note.MJText = value;
                 OnPropertyChanged();
             }
         }
     }
 
-    public DateTime Date => _note.MDate;
+    public DateTime Date => _note.MJDate;
 
-    public string Identifier => _note.MFilename;
+    public string Identifier => _note.MJFilename;
 
     public ICommand SaveCommand { get; private set; }
     public ICommand DeleteCommand { get; private set; }
@@ -49,15 +49,15 @@ internal class NoteViewModel : ObservableObject, IQueryAttributable
 
     private async Task Save()
     {
-        _note.MDate = DateTime.Now;
+        _note.MJDate = DateTime.Now;
         _note.Save();
-        await Shell.Current.GoToAsync($"..?saved={_note.MFilename}");
+        await Shell.Current.GoToAsync($"..?saved={_note.MJFilename}");
     }
 
     private async Task Delete()
     {
         _note.Delete();
-        await Shell.Current.GoToAsync($"..?deleted={_note.MFilename}");
+        await Shell.Current.GoToAsync($"..?deleted={_note.MJFilename}");
     }
 
     void IQueryAttributable.ApplyQueryAttributes(IDictionary<string, object> query)
@@ -71,7 +71,7 @@ internal class NoteViewModel : ObservableObject, IQueryAttributable
 
     public void Reload()
     {
-        _note = Models.Note.Load(_note.MFilename);
+        _note = Models.Note.Load(_note.MJFilename);
         RefreshProperties();
     }
 
